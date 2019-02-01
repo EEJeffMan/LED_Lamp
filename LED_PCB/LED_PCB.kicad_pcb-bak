@@ -1079,7 +1079,7 @@
   )
 
   (module Connectors:1pin (layer F.Cu) (tedit 5861332C) (tstamp 5C55866E)
-    (at 101.092 74.422)
+    (at 150.368 88.9)
     (descr "module 1 pin (ou trou mecanique de percage)")
     (tags DEV)
     (path /5C52A2C7)
@@ -1116,7 +1116,7 @@
   )
 
   (module SMD_Packages:1Pin (layer F.Cu) (tedit 0) (tstamp 5C558680)
-    (at 129.032 69.088)
+    (at 227.838 96.266)
     (descr "module 1 pin (ou trou mecanique de percage)")
     (tags DEV)
     (path /5C547F85)
@@ -1135,7 +1135,7 @@
   )
 
   (module SMD_Packages:1Pin (layer F.Cu) (tedit 0) (tstamp 5C558689)
-    (at 145.542 40.64)
+    (at 211.074 87.63)
     (descr "module 1 pin (ou trou mecanique de percage)")
     (tags DEV)
     (path /5C549149)
@@ -1154,7 +1154,7 @@
   )
 
   (module SMD_Packages:1Pin (layer F.Cu) (tedit 0) (tstamp 5C558692)
-    (at 107.696 90.17)
+    (at 219.202 87.884)
     (descr "module 1 pin (ou trou mecanique de percage)")
     (tags DEV)
     (path /5C547921)
@@ -1173,7 +1173,7 @@
   )
 
   (module SMD_Packages:1Pin (layer F.Cu) (tedit 0) (tstamp 5C55869B)
-    (at 111.252 80.264)
+    (at 227.33 87.884)
     (descr "module 1 pin (ou trou mecanique de percage)")
     (tags DEV)
     (path /5C547AA0)
@@ -1192,7 +1192,7 @@
   )
 
   (module SMD_Packages:1Pin (layer F.Cu) (tedit 0) (tstamp 5C5586A4)
-    (at 141.478 104.14)
+    (at 210.82 78.232)
     (descr "module 1 pin (ou trou mecanique de percage)")
     (tags DEV)
     (path /5C536933)
@@ -1211,7 +1211,7 @@
   )
 
   (module SMD_Packages:1Pin (layer F.Cu) (tedit 0) (tstamp 5C5586AD)
-    (at 144.526 95.25)
+    (at 218.948 78.994)
     (descr "module 1 pin (ou trou mecanique de percage)")
     (tags DEV)
     (path /5C5475EC)
@@ -1230,7 +1230,7 @@
   )
 
   (module SMD_Packages:1Pin (layer F.Cu) (tedit 0) (tstamp 5C5586B6)
-    (at 141.478 84.836)
+    (at 227.076 78.994)
     (descr "module 1 pin (ou trou mecanique de percage)")
     (tags DEV)
     (path /5C54767B)
@@ -1249,7 +1249,7 @@
   )
 
   (module SMD_Packages:1Pin (layer F.Cu) (tedit 0) (tstamp 5C5586BF)
-    (at 112.014 101.346)
+    (at 210.82 69.85)
     (descr "module 1 pin (ou trou mecanique de percage)")
     (tags DEV)
     (path /5C5479BC)

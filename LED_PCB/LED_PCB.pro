@@ -1,4 +1,4 @@
-update=1/30/2019 11:56:01 PM
+update=1/31/2019 11:01:52 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -269,3 +269,13 @@ LibName239=C:/KiCad/Libraries/LED
 LibName240=C:/KiCad/Libraries/buq2-kicad-components
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=C:/Users/Laptop/Documents/GitHub/LED_Lamp/LED_PCB/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
