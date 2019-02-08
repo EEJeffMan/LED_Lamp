@@ -1,4 +1,4 @@
-update=2/6/2019 2:16:10 AM
+update=2/7/2019 10:32:39 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -267,6 +267,7 @@ LibName237=digikey-symbols/dk_TVS-Mixed-Technology
 LibName238=digikey-symbols/dk_USB-DVI-HDMI-Connectors
 LibName239=C:/KiCad/Libraries/LED
 LibName240=C:/KiCad/Libraries/buq2-kicad-components
+LibName241=C:/KiCad/Libraries/CustomComponents
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
