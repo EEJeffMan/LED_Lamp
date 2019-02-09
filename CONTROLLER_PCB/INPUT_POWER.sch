@@ -181,7 +181,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 3
+Sheet 2 4
 Title ""
 Date ""
 Rev ""
@@ -223,17 +223,6 @@ F 1 "GND" H 1550 1450 50  0000 C CNN
 F 2 "" H 1550 1600 50  0001 C CNN
 F 3 "" H 1550 1600 50  0001 C CNN
 	1    1550 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L C_Small C?
-U 1 1 5C5A4C4F
-P 3500 1300
-F 0 "C?" H 3510 1370 50  0000 L CNN
-F 1 "C_Small" H 3510 1220 50  0000 L CNN
-F 2 "" H 3500 1300 50  0001 C CNN
-F 3 "" H 3500 1300 50  0001 C CNN
-	1    3500 1300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -285,32 +274,10 @@ L C_Small C?
 U 1 1 5C5A4C72
 P 1900 1300
 F 0 "C?" H 1910 1370 50  0000 L CNN
-F 1 "C_Small" H 1910 1220 50  0000 L CNN
-F 2 "" H 1900 1300 50  0001 C CNN
+F 1 "22uF" H 1910 1220 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 1900 1300 50  0001 C CNN
 F 3 "" H 1900 1300 50  0001 C CNN
 	1    1900 1300
-	1    0    0    -1  
-$EndComp
-$Comp
-L C_Small C?
-U 1 1 5C5A4C79
-P 2000 3350
-F 0 "C?" H 2010 3420 50  0000 L CNN
-F 1 "C_Small" H 2010 3270 50  0000 L CNN
-F 2 "" H 2000 3350 50  0001 C CNN
-F 3 "" H 2000 3350 50  0001 C CNN
-	1    2000 3350
-	1    0    0    -1  
-$EndComp
-$Comp
-L C_Small C?
-U 1 1 5C5A4C80
-P 3250 3300
-F 0 "C?" H 3260 3370 50  0000 L CNN
-F 1 "C_Small" H 3260 3220 50  0000 L CNN
-F 2 "" H 3250 3300 50  0001 C CNN
-F 3 "" H 3250 3300 50  0001 C CNN
-	1    3250 3300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -718,17 +685,6 @@ F 3 "" H 1900 1600 50  0001 C CNN
 $EndComp
 $Comp
 L GND #PWR?
-U 1 1 5C5A4D7A
-P 3500 1550
-F 0 "#PWR?" H 3500 1300 50  0001 C CNN
-F 1 "GND" H 3500 1400 50  0000 C CNN
-F 2 "" H 3500 1550 50  0001 C CNN
-F 3 "" H 3500 1550 50  0001 C CNN
-	1    3500 1550
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR?
 U 1 1 5C5A4D80
 P 4500 1550
 F 0 "#PWR?" H 4500 1300 50  0001 C CNN
@@ -994,15 +950,9 @@ Wire Wire Line
 	3000 1550 2650 1550
 Connection ~ 2650 1550
 Wire Wire Line
-	2850 1100 3950 1100
-Wire Wire Line
 	3000 1250 3000 1100
 Connection ~ 3000 1100
-Wire Wire Line
-	3500 1200 3500 1100
 Connection ~ 3500 1100
-Wire Wire Line
-	3500 1400 3500 1550
 Wire Wire Line
 	4250 1100 7400 1100
 Wire Wire Line
@@ -1445,7 +1395,7 @@ Connection ~ 10300 1800
 Wire Wire Line
 	9800 2250 9800 2100
 Text GLabel 9600 1800 0    60   Input ~ 0
-ADC_Vout
+ADC_VOUT
 Connection ~ 9800 1800
 Connection ~ 10300 1100
 Wire Wire Line
@@ -1458,4 +1408,54 @@ Wire Wire Line
 	10300 1500 10300 1100
 Text Label 5750 1100 0    60   ~ 0
 VIN
+Wire Wire Line
+	2850 1100 3950 1100
+Wire Wire Line
+	3500 1200 3500 1100
+$Comp
+L GND #PWR?
+U 1 1 5C5A4D7A
+P 3500 1550
+F 0 "#PWR?" H 3500 1300 50  0001 C CNN
+F 1 "GND" H 3500 1400 50  0000 C CNN
+F 2 "" H 3500 1550 50  0001 C CNN
+F 3 "" H 3500 1550 50  0001 C CNN
+	1    3500 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 1400 3500 1550
+$Comp
+L C_Small C?
+U 1 1 5C605751
+P 3500 1300
+F 0 "C?" H 3510 1370 50  0000 L CNN
+F 1 "22uF" H 3510 1220 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 3500 1300 50  0001 C CNN
+F 3 "" H 3500 1300 50  0001 C CNN
+	1    3500 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C?
+U 1 1 5C605830
+P 2000 3350
+F 0 "C?" H 2010 3420 50  0000 L CNN
+F 1 "22uF" H 2010 3270 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 2000 3350 50  0001 C CNN
+F 3 "" H 2000 3350 50  0001 C CNN
+	1    2000 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C?
+U 1 1 5C6058EA
+P 3250 3300
+F 0 "C?" H 3260 3370 50  0000 L CNN
+F 1 "22uF" H 3260 3220 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 3250 3300 50  0001 C CNN
+F 3 "" H 3250 3300 50  0001 C CNN
+	1    3250 3300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

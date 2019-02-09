@@ -134,6 +134,35 @@ X VOUT 4 400 -100 100 L 50 50 1 1 w
 ENDDRAW
 ENDDEF
 #
+# B3U-1000P
+#
+DEF B3U-1000P S 0 40 Y Y 1 F N
+F0 "S" 0 160 60 H V C CNN
+F1 "B3U-1000P" 0 -100 60 H V C CNN
+F2 "digikey-footprints:Switch_Tactile_SMD_B3U-1000P" 200 200 60 H I L CNN
+F3 "http://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf" 200 300 60 H I L CNN
+F4 "SW1020CT-ND" 200 400 60 H I L CNN "Digi-Key_PN"
+F5 "B3U-1000P" 200 500 60 H I L CNN "MPN"
+F6 "Switches" 200 600 60 H I L CNN "Category"
+F7 "Tactile Switches" 200 700 60 H I L CNN "Family"
+F8 "http://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F9 "/product-detail/en/omron-electronics-inc-emc-div/B3U-1000P/SW1020CT-ND/1534357" 200 900 60 H I L CNN "DK_Detail_Page"
+F10 "SWITCH TACTILE SPST-NO 0.05A 12V" 200 1000 60 H I L CNN "Description"
+F11 "Omron Electronics Inc-EMC Div" 200 1100 60 H I L CNN "Manufacturer"
+F12 "Active" 200 1200 60 H I L CNN "Status"
+DRAW
+C -60 0 10 0 1 0 N
+C 60 0 10 0 1 0 N
+P 2 0 1 0 -100 0 -70 0 N
+P 2 0 1 0 -70 50 70 50 N
+P 2 0 1 0 -40 110 40 110 N
+P 2 0 1 0 0 50 0 110 N
+P 2 0 1 0 100 0 70 0 N
+X ~ 1 -200 0 100 R 50 50 1 1 P
+X ~ 2 200 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Barrel_Jack
 #
 DEF Barrel_Jack J 0 40 Y Y 1 F N
@@ -171,6 +200,161 @@ P 2 0 1 13 -60 -20 60 -20 N
 P 2 0 1 12 -60 20 60 20 N
 X ~ 1 0 100 80 D 50 50 1 1 P
 X ~ 2 0 -100 80 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Conn_01x03
+#
+DEF Conn_01x03 J 0 40 Y N 1 F N
+F0 "J" 0 200 50 H V C CNN
+F1 "Conn_01x03" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 150 50 -150 1 1 10 f
+X Pin_1 1 -200 100 150 R 50 50 1 1 P
+X Pin_2 2 -200 0 150 R 50 50 1 1 P
+X Pin_3 3 -200 -100 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Conn_01x04
+#
+DEF Conn_01x04 J 0 40 Y N 1 F N
+F0 "J" 0 200 50 H V C CNN
+F1 "Conn_01x04" 0 -300 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+S -50 -195 0 -205 1 1 6 N
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 150 50 -250 1 1 10 f
+X Pin_1 1 -200 100 150 R 50 50 1 1 P
+X Pin_2 2 -200 0 150 R 50 50 1 1 P
+X Pin_3 3 -200 -100 150 R 50 50 1 1 P
+X Pin_4 4 -200 -200 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Conn_01x06
+#
+DEF Conn_01x06 J 0 40 Y N 1 F N
+F0 "J" 0 300 50 H V C CNN
+F1 "Conn_01x06" 0 -400 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+S -50 -295 0 -305 1 1 6 N
+S -50 -195 0 -205 1 1 6 N
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 205 0 195 1 1 6 N
+S -50 250 50 -350 1 1 10 f
+X Pin_1 1 -200 200 150 R 50 50 1 1 P
+X Pin_2 2 -200 100 150 R 50 50 1 1 P
+X Pin_3 3 -200 0 150 R 50 50 1 1 P
+X Pin_4 4 -200 -100 150 R 50 50 1 1 P
+X Pin_5 5 -200 -200 150 R 50 50 1 1 P
+X Pin_6 6 -200 -300 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Conn_02x07_Odd_Even
+#
+DEF Conn_02x07_Odd_Even J 0 40 Y N 1 F N
+F0 "J" 50 400 50 H V C CNN
+F1 "Conn_02x07_Odd_Even" 50 -400 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*2x??x*mm*
+ Connector*:*2x???Pitch*
+ Pin_Header_Straight_2X*
+ Pin_Header_Angled_2X*
+ Socket_Strip_Straight_2X*
+ Socket_Strip_Angled_2X*
+$ENDFPLIST
+DRAW
+S -50 -295 0 -305 1 1 6 N
+S -50 -195 0 -205 1 1 6 N
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 205 0 195 1 1 6 N
+S -50 305 0 295 1 1 6 N
+S -50 350 150 -350 1 1 10 f
+S 150 -295 100 -305 1 1 6 N
+S 150 -195 100 -205 1 1 6 N
+S 150 -95 100 -105 1 1 6 N
+S 150 5 100 -5 1 1 6 N
+S 150 105 100 95 1 1 6 N
+S 150 205 100 195 1 1 6 N
+S 150 305 100 295 1 1 6 N
+X Pin_1 1 -200 300 150 R 50 50 1 1 P
+X Pin_2 2 300 300 150 L 50 50 1 1 P
+X Pin_3 3 -200 200 150 R 50 50 1 1 P
+X Pin_4 4 300 200 150 L 50 50 1 1 P
+X Pin_5 5 -200 100 150 R 50 50 1 1 P
+X Pin_6 6 300 100 150 L 50 50 1 1 P
+X Pin_7 7 -200 0 150 R 50 50 1 1 P
+X Pin_8 8 300 0 150 L 50 50 1 1 P
+X Pin_9 9 -200 -100 150 R 50 50 1 1 P
+X Pin_10 10 300 -100 150 L 50 50 1 1 P
+X Pin_11 11 -200 -200 150 R 50 50 1 1 P
+X Pin_12 12 300 -200 150 L 50 50 1 1 P
+X Pin_13 13 -200 -300 150 R 50 50 1 1 P
+X Pin_14 14 300 -300 150 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Crystal
+#
+DEF Crystal Y 0 40 N N 1 F N
+F0 "Y" 0 150 50 H V C CNN
+F1 "Crystal" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Crystal*
+$ENDFPLIST
+DRAW
+S -45 100 45 -100 0 1 12 N
+P 2 0 1 0 -100 0 -75 0 N
+P 2 0 1 20 -75 -50 -75 50 N
+P 2 0 1 20 75 -50 75 50 N
+P 2 0 1 0 100 0 75 0 N
+X 1 1 -150 0 50 R 50 50 1 1 P
+X 2 2 150 0 50 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -231,6 +415,78 @@ A 0 25 25 -899 899 0 1 0 N 0 0 0 50
 A 0 75 25 -899 899 0 1 0 N 0 50 0 100
 X 1 1 0 150 50 D 50 50 1 1 P
 X 2 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# LED_ALT
+#
+DEF LED_ALT D 0 40 Y N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "LED_ALT" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ LED*
+$ENDFPLIST
+DRAW
+P 2 0 1 8 -50 -50 -50 50 N
+P 2 0 1 0 -50 0 50 0 N
+P 4 0 1 8 50 -50 50 50 -50 0 50 -50 F
+P 5 0 1 0 -120 -30 -180 -90 -150 -90 -180 -90 -180 -60 N
+P 5 0 1 0 -70 -30 -130 -90 -100 -90 -130 -90 -130 -60 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Q_NMOS_GSD
+#
+DEF Q_NMOS_GSD Q 0 0 Y N 1 F N
+F0 "Q" 200 50 50 H V L CNN
+F1 "Q_NMOS_GSD" 200 -50 50 H V L CNN
+F2 "" 200 100 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C 65 0 111 0 1 10 N
+C 100 -70 11 0 1 0 F
+C 100 70 11 0 1 0 F
+P 2 0 1 0 2 0 10 0 N
+P 2 0 1 0 30 -70 100 -70 N
+P 2 0 1 10 30 -50 30 -90 N
+P 2 0 1 0 30 0 100 0 N
+P 2 0 1 10 30 20 30 -20 N
+P 2 0 1 0 30 70 100 70 N
+P 2 0 1 10 30 90 30 50 N
+P 2 0 1 0 100 -70 100 -100 N
+P 2 0 1 0 100 -70 100 0 N
+P 2 0 1 0 100 100 100 70 N
+P 3 0 1 10 10 75 10 -75 10 -75 N
+P 4 0 1 0 40 0 80 15 80 -15 40 0 F
+P 4 0 1 0 100 -70 130 -70 130 70 100 70 N
+P 4 0 1 0 110 20 115 15 145 15 150 10 N
+P 4 0 1 0 130 15 115 -10 145 -10 130 15 N
+X G 1 -200 0 200 R 50 50 1 1 I
+X S 2 100 -200 100 U 50 50 1 1 P
+X D 3 100 200 100 D 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Q_NPN_BEC
+#
+DEF Q_NPN_BEC Q 0 0 Y N 1 F N
+F0 "Q" 200 50 50 H V L CNN
+F1 "Q_NPN_BEC" 200 -50 50 H V L CNN
+F2 "" 200 100 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C 50 0 111 0 1 10 N
+P 2 0 1 0 25 25 100 100 N
+P 3 0 1 0 25 -25 100 -100 100 -100 N
+P 3 0 1 20 25 75 25 -75 25 -75 N
+P 5 0 1 0 50 -70 70 -50 90 -90 50 -70 50 -70 F
+X B 1 -200 0 225 R 50 50 1 1 I
+X E 2 100 -200 100 U 50 50 1 1 P
+X C 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #

@@ -181,7 +181,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 3
+Sheet 3 4
 Title ""
 Date ""
 Rev ""
@@ -191,26 +191,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L 3320 MOD?
-U 1 1 5C5A5249
-P 2650 950
-F 0 "MOD?" H 2650 1200 60  0000 C CNN
-F 1 "3320" H 2650 1300 60  0000 C CNN
-F 2 "digikey-footprints:None" H 2850 1150 60  0001 L CNN
-F 3 "https://media.digikey.com/pdf/Data%20Sheets/Adafruit%20PDFs/3320_Web.pdf" H 2850 1250 60  0001 L CNN
-F 4 "1528-1801-ND" H 2850 1350 60  0001 L CNN "Digi-Key_PN"
-F 5 "3320" H 2850 1450 60  0001 L CNN "MPN"
-F 6 "RF/IF and RFID" H 2850 1550 60  0001 L CNN "Category"
-F 7 "RF Transceiver Modules" H 2850 1650 60  0001 L CNN "Family"
-F 8 "https://media.digikey.com/pdf/Data%20Sheets/Adafruit%20PDFs/3320_Web.pdf" H 2850 1750 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/adafruit-industries-llc/3320/1528-1801-ND/6560941" H 2850 1850 60  0001 L CNN "DK_Detail_Page"
-F 10 "TXRX MOD BLE WIFI ESP-WROOM-32" H 2850 1950 60  0001 L CNN "Description"
-F 11 "Adafruit Industries LLC" H 2850 2050 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 2850 2150 60  0001 L CNN "Status"
-	1    2650 950 
-	1    0    0    -1  
-$EndComp
 $Comp
 L GND #PWR?
 U 1 1 5C5A52E4
@@ -234,7 +214,7 @@ F 3 "" H 1250 750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 1050 1500 0    60   Input ~ 0
-RESET_N
+~RST
 NoConn ~ 1450 1700
 NoConn ~ 1450 1900
 Wire Wire Line
@@ -247,7 +227,6 @@ Wire Wire Line
 	1450 1050 600  1050
 Wire Wire Line
 	600  1050 600  1150
-NoConn ~ 7150 3500
 $Comp
 L GND #PWR?
 U 1 1 5C5AB35F
@@ -363,4 +342,137 @@ Wire Wire Line
 	8300 5250 8300 5400
 Wire Wire Line
 	7800 5250 7800 5400
+Text GLabel 1050 2100 0    60   Input ~ 0
+ADC_VIN
+Text GLabel 1100 2300 0    60   Input ~ 0
+ADC_VOUT
+Wire Wire Line
+	1050 2100 1450 2100
+Wire Wire Line
+	1100 2300 1450 2300
+Text GLabel 1100 2500 0    60   Input ~ 0
+32KHZ_IN
+Text GLabel 1150 2700 0    60   Input ~ 0
+32KHZ_OUT
+Wire Wire Line
+	1100 2500 1450 2500
+Wire Wire Line
+	1150 2700 1450 2700
+Text GLabel 1100 2900 0    60   Input ~ 0
+BOOST_EN
+Wire Wire Line
+	1100 2900 1450 2900
+Text GLabel 950  3100 0    60   Input ~ 0
+DO_0
+Wire Wire Line
+	950  3100 1450 3100
+NoConn ~ 1450 3300
+Text GLabel 1050 3500 0    60   Input ~ 0
+SPI_SCK
+Text GLabel 1050 3700 0    60   Input ~ 0
+SPI_MISO
+Text GLabel 950  4100 0    60   Input ~ 0
+IO13
+Wire Wire Line
+	1050 3500 1450 3500
+Wire Wire Line
+	1050 3700 1450 3700
+Wire Wire Line
+	950  4100 1450 4100
+NoConn ~ 1450 4300
+NoConn ~ 1450 4500
+NoConn ~ 1450 4700
+NoConn ~ 1450 4900
+NoConn ~ 1450 5150
+NoConn ~ 1450 5350
+$Comp
+L TEST TP?
+U 1 1 5C5F05AF
+P 950 6950
+F 0 "TP?" H 950 7250 50  0000 C BNN
+F 1 "TEST" H 950 7200 50  0000 C CNN
+F 2 "" H 950 6950 50  0001 C CNN
+F 3 "" H 950 6950 50  0001 C CNN
+	1    950  6950
+	0    -1   -1   0   
+$EndComp
+Text GLabel 750  5850 0    60   Input ~ 0
+IO2
+Wire Wire Line
+	950  5600 1450 5600
+Text GLabel 750  6100 0    60   Input ~ 0
+IO0
+NoConn ~ 1450 6300
+Wire Wire Line
+	750  5850 1450 5850
+Wire Wire Line
+	750  6100 1450 6100
+Text GLabel 850  6500 0    60   Input ~ 0
+U2RXD
+Text GLabel 850  6750 0    60   Input ~ 0
+U2TXD
+Wire Wire Line
+	850  6500 1450 6500
+Wire Wire Line
+	850  6750 1450 6750
+Wire Wire Line
+	950  6950 1450 6950
+NoConn ~ 1450 7150
+NoConn ~ 7150 3950
+$Comp
+L TEST TP?
+U 1 1 5C5F0B08
+P 7650 3500
+F 0 "TP?" H 7650 3800 50  0000 C BNN
+F 1 "TEST" H 7650 3750 50  0000 C CNN
+F 2 "" H 7650 3500 50  0001 C CNN
+F 3 "" H 7650 3500 50  0001 C CNN
+	1    7650 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L 3320 MOD?
+U 1 1 5C5A5249
+P 2650 950
+F 0 "MOD?" H 2650 1200 60  0000 C CNN
+F 1 "3320" H 2650 1300 60  0000 C CNN
+F 2 "digikey-footprints:None" H 2850 1150 60  0001 L CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Adafruit%20PDFs/3320_Web.pdf" H 2850 1250 60  0001 L CNN
+F 4 "1528-1801-ND" H 2850 1350 60  0001 L CNN "Digi-Key_PN"
+F 5 "3320" H 2850 1450 60  0001 L CNN "MPN"
+F 6 "RF/IF and RFID" H 2850 1550 60  0001 L CNN "Category"
+F 7 "RF Transceiver Modules" H 2850 1650 60  0001 L CNN "Family"
+F 8 "https://media.digikey.com/pdf/Data%20Sheets/Adafruit%20PDFs/3320_Web.pdf" H 2850 1750 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/adafruit-industries-llc/3320/1528-1801-ND/6560941" H 2850 1850 60  0001 L CNN "DK_Detail_Page"
+F 10 "TXRX MOD BLE WIFI ESP-WROOM-32" H 2850 1950 60  0001 L CNN "Description"
+F 11 "Adafruit Industries LLC" H 2850 2050 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 2850 2150 60  0001 L CNN "Status"
+	1    2650 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 3500 7650 3500
+Text GLabel 7650 3200 2    60   Input ~ 0
+I2C_SDA
+Text GLabel 7650 2200 2    60   Input ~ 0
+I2C_SCL
+Wire Wire Line
+	7650 2200 7150 2200
+Wire Wire Line
+	7650 3200 7150 3200
+$Comp
+L TEST TP?
+U 1 1 5C5F0D76
+P 7650 1950
+F 0 "TP?" H 7650 2250 50  0000 C BNN
+F 1 "TEST" H 7650 2200 50  0000 C CNN
+F 2 "" H 7650 1950 50  0001 C CNN
+F 3 "" H 7650 1950 50  0001 C CNN
+	1    7650 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7150 1950 7650 1950
+Text GLabel 950  5600 0    60   Input ~ 0
+IO15
 $EndSCHEMATC

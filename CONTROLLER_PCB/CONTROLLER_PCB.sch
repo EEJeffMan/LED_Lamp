@@ -181,7 +181,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -192,7 +192,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 4900 3400 1050 600 
+S 4950 3350 1050 600 
 U 5C5A3691
 F0 "INPUT_POWER" 60
 F1 "INPUT_POWER.sch" 60
@@ -202,5 +202,11 @@ S 6450 3350 950  600
 U 5C5A36C1
 F0 "ESP32" 60
 F1 "ESP32.sch" 60
+$EndSheet
+$Sheet
+S 7800 3350 1000 600 
+U 5C5F103F
+F0 "MCU_SUPPORT" 60
+F1 "MCU_SUPPORT.sch" 60
 $EndSheet
 $EndSCHEMATC

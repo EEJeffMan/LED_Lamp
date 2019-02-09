@@ -181,7 +181,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 3
+Sheet 2 4
 Title ""
 Date ""
 Rev ""
@@ -1445,7 +1445,7 @@ Connection ~ 10300 1800
 Wire Wire Line
 	9800 2250 9800 2100
 Text GLabel 9600 1800 0    60   Input ~ 0
-ADC_VIN
+ADC_VOUT
 Connection ~ 9800 1800
 Connection ~ 10300 1100
 Wire Wire Line
@@ -1456,4 +1456,6 @@ Wire Wire Line
 	9250 3500 6800 3500
 Wire Wire Line
 	10300 1500 10300 1100
+Text Label 5750 1100 0    60   ~ 0
+VIN
 $EndSCHEMATC
