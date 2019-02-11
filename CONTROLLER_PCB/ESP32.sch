@@ -176,6 +176,7 @@ LIBS:dk_TVS-Diodes
 LIBS:dk_TVS-Mixed-Technology
 LIBS:dk_USB-DVI-HDMI-Connectors
 LIBS:TPS55340PWP
+LIBS:espressif-xess
 LIBS:CONTROLLER_PCB-cache
 EELAYER 25 0
 EELAYER END
@@ -192,287 +193,558 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L GND #PWR?
-U 1 1 5C5A52E4
-P 600 1150
-F 0 "#PWR?" H 600 900 50  0001 C CNN
-F 1 "GND" H 600 1000 50  0000 C CNN
-F 2 "" H 600 1150 50  0001 C CNN
-F 3 "" H 600 1150 50  0001 C CNN
-	1    600  1150
-	1    0    0    -1  
-$EndComp
-$Comp
-L +3.3V #PWR?
-U 1 1 5C5AB14D
-P 1250 750
-F 0 "#PWR?" H 1250 600 50  0001 C CNN
-F 1 "+3.3V" H 1250 890 50  0000 C CNN
-F 2 "" H 1250 750 50  0001 C CNN
-F 3 "" H 1250 750 50  0001 C CNN
-	1    1250 750 
-	1    0    0    -1  
-$EndComp
-Text GLabel 1050 1500 0    60   Input ~ 0
-~RST
-NoConn ~ 1450 1700
-NoConn ~ 1450 1900
-Wire Wire Line
-	1050 1500 1450 1500
-Wire Wire Line
-	1450 1300 1250 1300
-Wire Wire Line
-	1250 1300 1250 750 
-Wire Wire Line
-	1450 1050 600  1050
-Wire Wire Line
-	600  1050 600  1150
-$Comp
-L GND #PWR?
-U 1 1 5C5AB35F
-P 7400 2300
-F 0 "#PWR?" H 7400 2050 50  0001 C CNN
-F 1 "GND" H 7400 2150 50  0000 C CNN
-F 2 "" H 7400 2300 50  0001 C CNN
-F 3 "" H 7400 2300 50  0001 C CNN
-	1    7400 2300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7400 2300 7400 1450
-Wire Wire Line
-	7400 1450 7150 1450
-Wire Wire Line
-	7150 1700 7400 1700
-Connection ~ 7400 1700
-$Comp
-L GND #PWR?
-U 1 1 5C5AB3CE
-P 1200 7350
-F 0 "#PWR?" H 1200 7100 50  0001 C CNN
-F 1 "GND" H 1200 7200 50  0000 C CNN
-F 2 "" H 1200 7350 50  0001 C CNN
-F 3 "" H 1200 7350 50  0001 C CNN
-	1    1200 7350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1200 7350 1200 3900
-Wire Wire Line
-	1200 3900 1450 3900
-Text GLabel 7650 2600 2    60   Input ~ 0
-TXDO
-Text GLabel 7650 2850 2    60   Input ~ 0
-RXDI
-Wire Wire Line
-	7650 2850 7150 2850
-Wire Wire Line
-	7650 2600 7150 2600
-$Comp
-L C_Small C?
+L C_Small C22
 U 1 1 5C5AC1FB
-P 7800 5150
-F 0 "C?" H 7810 5220 50  0000 L CNN
-F 1 "0.1uF" H 7810 5070 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" H 7800 5150 50  0001 C CNN
-F 3 "" H 7800 5150 50  0001 C CNN
-	1    7800 5150
+P 900 1550
+F 0 "C22" H 910 1620 50  0000 L CNN
+F 1 "0.1uF" H 910 1470 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 900 1550 50  0001 C CNN
+F 3 "" H 900 1550 50  0001 C CNN
+	1    900  1550
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C?
+L C_Small C23
 U 1 1 5C5AC279
-P 8300 5150
-F 0 "C?" H 8310 5220 50  0000 L CNN
-F 1 "10uF" H 8310 5070 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8300 5150 50  0001 C CNN
-F 3 "" H 8300 5150 50  0001 C CNN
-	1    8300 5150
+P 1400 1550
+F 0 "C23" H 1410 1620 50  0000 L CNN
+F 1 "10uF" H 1410 1470 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1400 1550 50  0001 C CNN
+F 3 "" H 1400 1550 50  0001 C CNN
+	1    1400 1550
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR038
 U 1 1 5C5AC2C0
-P 7800 5400
-F 0 "#PWR?" H 7800 5150 50  0001 C CNN
-F 1 "GND" H 7800 5250 50  0000 C CNN
-F 2 "" H 7800 5400 50  0001 C CNN
-F 3 "" H 7800 5400 50  0001 C CNN
-	1    7800 5400
+P 900 1800
+F 0 "#PWR038" H 900 1550 50  0001 C CNN
+F 1 "GND" H 900 1650 50  0000 C CNN
+F 2 "" H 900 1800 50  0001 C CNN
+F 3 "" H 900 1800 50  0001 C CNN
+	1    900  1800
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR039
 U 1 1 5C5AC2DA
-P 8300 5400
-F 0 "#PWR?" H 8300 5150 50  0001 C CNN
-F 1 "GND" H 8300 5250 50  0000 C CNN
-F 2 "" H 8300 5400 50  0001 C CNN
-F 3 "" H 8300 5400 50  0001 C CNN
-	1    8300 5400
+P 1400 1800
+F 0 "#PWR039" H 1400 1550 50  0001 C CNN
+F 1 "GND" H 1400 1650 50  0000 C CNN
+F 2 "" H 1400 1800 50  0001 C CNN
+F 3 "" H 1400 1800 50  0001 C CNN
+	1    1400 1800
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR?
+L +3.3V #PWR040
 U 1 1 5C5AC2F4
-P 7800 4900
-F 0 "#PWR?" H 7800 4750 50  0001 C CNN
-F 1 "+3.3V" H 7800 5040 50  0000 C CNN
-F 2 "" H 7800 4900 50  0001 C CNN
-F 3 "" H 7800 4900 50  0001 C CNN
-	1    7800 4900
+P 900 1300
+F 0 "#PWR040" H 900 1150 50  0001 C CNN
+F 1 "+3.3V" H 900 1440 50  0000 C CNN
+F 2 "" H 900 1300 50  0001 C CNN
+F 3 "" H 900 1300 50  0001 C CNN
+	1    900  1300
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR?
+L +3.3V #PWR041
 U 1 1 5C5AC30E
-P 8300 4900
-F 0 "#PWR?" H 8300 4750 50  0001 C CNN
-F 1 "+3.3V" H 8300 5040 50  0000 C CNN
-F 2 "" H 8300 4900 50  0001 C CNN
-F 3 "" H 8300 4900 50  0001 C CNN
-	1    8300 4900
+P 1400 1300
+F 0 "#PWR041" H 1400 1150 50  0001 C CNN
+F 1 "+3.3V" H 1400 1440 50  0000 C CNN
+F 2 "" H 1400 1300 50  0001 C CNN
+F 3 "" H 1400 1300 50  0001 C CNN
+	1    1400 1300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7800 5050 7800 4900
-Wire Wire Line
-	8300 5050 8300 4900
-Wire Wire Line
-	8300 5250 8300 5400
-Wire Wire Line
-	7800 5250 7800 5400
-Text GLabel 1050 2100 0    60   Input ~ 0
-ADC_VIN
-Text GLabel 1100 2300 0    60   Input ~ 0
-ADC_VOUT
-Wire Wire Line
-	1050 2100 1450 2100
-Wire Wire Line
-	1100 2300 1450 2300
-Text GLabel 1100 2500 0    60   Input ~ 0
-32KHZ_IN
-Text GLabel 1150 2700 0    60   Input ~ 0
-32KHZ_OUT
-Wire Wire Line
-	1100 2500 1450 2500
-Wire Wire Line
-	1150 2700 1450 2700
-Text GLabel 1100 2900 0    60   Input ~ 0
-BOOST_EN
-Wire Wire Line
-	1100 2900 1450 2900
-Text GLabel 950  3100 0    60   Input ~ 0
-DO_0
-Wire Wire Line
-	950  3100 1450 3100
-NoConn ~ 1450 3300
-Text GLabel 1050 3500 0    60   Input ~ 0
-SPI_SCK
-Text GLabel 1050 3700 0    60   Input ~ 0
-SPI_MISO
-Text GLabel 950  4100 0    60   Input ~ 0
-IO13
-Wire Wire Line
-	1050 3500 1450 3500
-Wire Wire Line
-	1050 3700 1450 3700
-Wire Wire Line
-	950  4100 1450 4100
-NoConn ~ 1450 4300
-NoConn ~ 1450 4500
-NoConn ~ 1450 4700
-NoConn ~ 1450 4900
-NoConn ~ 1450 5150
-NoConn ~ 1450 5350
 $Comp
-L TEST TP?
-U 1 1 5C5F05AF
-P 950 6950
-F 0 "TP?" H 950 7250 50  0000 C BNN
-F 1 "TEST" H 950 7200 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 950 6950 50  0001 C CNN
-F 3 "" H 950 6950 50  0001 C CNN
-	1    950  6950
+L ESP32-WROOM U4
+U 1 1 5C60BDE0
+P 3000 1850
+F 0 "U4" H 3400 2800 60  0000 R CNN
+F 1 "ESP32-WROOM" H 3950 2650 60  0000 R CNN
+F 2 "ESP32-footprints-Lib:ESP32-WROOM" H 3000 1850 60  0001 C CNN
+F 3 "" H 3000 1850 60  0001 C CNN
+	1    3000 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR042
+U 1 1 5C60C369
+P 2150 1950
+F 0 "#PWR042" H 2150 1700 50  0001 C CNN
+F 1 "GND" H 2150 1800 50  0000 C CNN
+F 2 "" H 2150 1950 50  0001 C CNN
+F 3 "" H 2150 1950 50  0001 C CNN
+	1    2150 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR043
+U 1 1 5C60C36F
+P 2800 1400
+F 0 "#PWR043" H 2800 1250 50  0001 C CNN
+F 1 "+3.3V" H 2800 1540 50  0000 C CNN
+F 2 "" H 2800 1400 50  0001 C CNN
+F 3 "" H 2800 1400 50  0001 C CNN
+	1    2800 1400
+	1    0    0    -1  
+$EndComp
+Text GLabel 2600 2050 0    60   Input ~ 0
+~RST
+Text GLabel 2600 2350 0    60   Input ~ 0
+ADC_VIN
+Text GLabel 2650 2450 0    60   Input ~ 0
+ADC_VOUT
+Text GLabel 2650 2550 0    60   Input ~ 0
+32KHZ_IN
+Text GLabel 2700 2650 0    60   Input ~ 0
+32KHZ_OUT
+Text GLabel 2650 2750 0    60   Input ~ 0
+BOOST_EN
+Text GLabel 2500 2950 0    60   Input ~ 0
+DO_0
+Text GLabel 2600 3050 0    60   Input ~ 0
+SPI_SCK
+Text GLabel 2600 3150 0    60   Input ~ 0
+SPI_MISO
+Text GLabel 2600 4300 0    60   Input ~ 0
+IO13
+$Comp
+L TEST TP9
+U 1 1 5C60C395
+P 6450 2750
+F 0 "TP9" H 6450 3050 50  0000 C BNN
+F 1 "TEST" H 6450 3000 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 6450 2750 50  0001 C CNN
+F 3 "" H 6450 2750 50  0001 C CNN
+	1    6450 2750
+	0    1    1    0   
+$EndComp
+Text GLabel 2600 4700 0    60   Input ~ 0
+IO2
+Text GLabel 5900 3150 2    60   Input ~ 0
+IO0
+Text GLabel 5900 2950 2    60   Input ~ 0
+U2RXD
+Text GLabel 5900 2850 2    60   Input ~ 0
+U2TXD
+Text GLabel 2600 4500 0    60   Input ~ 0
+IO15
+NoConn ~ 3000 2150
+NoConn ~ 3000 2250
+NoConn ~ 4100 3950
+NoConn ~ 4200 3950
+NoConn ~ 4300 3950
+NoConn ~ 4400 3950
+NoConn ~ 4500 3950
+NoConn ~ 4600 3950
+$Comp
+L GND #PWR044
+U 1 1 5C60D2C1
+P 3900 4900
+F 0 "#PWR044" H 3900 4650 50  0001 C CNN
+F 1 "GND" H 3900 4750 50  0000 C CNN
+F 2 "" H 3900 4900 50  0001 C CNN
+F 3 "" H 3900 4900 50  0001 C CNN
+	1    3900 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST TP8
+U 1 1 5C60DDA5
+P 6450 2450
+F 0 "TP8" H 6450 2750 50  0000 C BNN
+F 1 "TEST" H 6450 2700 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 6450 2450 50  0001 C CNN
+F 3 "" H 6450 2450 50  0001 C CNN
+	1    6450 2450
+	0    1    1    0   
+$EndComp
+Text GLabel 7550 1950 2    60   Input ~ 0
+TXDO
+Text GLabel 7550 2450 2    60   Input ~ 0
+RXDI
+Text GLabel 5900 2350 2    60   Input ~ 0
+I2C_SDA
+Text GLabel 5900 2050 2    60   Input ~ 0
+I2C_SCL
+$Comp
+L TEST TP7
+U 1 1 5C60E419
+P 6350 1950
+F 0 "TP7" H 6350 2250 50  0000 C BNN
+F 1 "TEST" H 6350 2200 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 6350 1950 50  0001 C CNN
+F 3 "" H 6350 1950 50  0001 C CNN
+	1    6350 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR045
+U 1 1 5C60E4E7
+P 5550 3400
+F 0 "#PWR045" H 5550 3150 50  0001 C CNN
+F 1 "GND" H 5550 3250 50  0000 C CNN
+F 2 "" H 5550 3400 50  0001 C CNN
+F 3 "" H 5550 3400 50  0001 C CNN
+	1    5550 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR046
+U 1 1 5C60ED6C
+P 5450 1150
+F 0 "#PWR046" H 5450 900 50  0001 C CNN
+F 1 "GND" H 5450 1000 50  0000 C CNN
+F 2 "" H 5450 1150 50  0001 C CNN
+F 3 "" H 5450 1150 50  0001 C CNN
+	1    5450 1150
+	1    0    0    -1  
+$EndComp
+Text GLabel 2650 2850 0    60   Input ~ 0
+BOOST_BYPASS
+$Comp
+L TEST TP18
+U 1 1 5C619798
+P 5950 3450
+F 0 "TP18" H 5950 3750 50  0000 C BNN
+F 1 "TEST" H 5950 3700 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 5950 3450 50  0001 C CNN
+F 3 "" H 5950 3450 50  0001 C CNN
+	1    5950 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L TEST TP15
+U 1 1 5C6198A7
+P 2650 5000
+F 0 "TP15" H 2650 5300 50  0000 C BNN
+F 1 "TEST" H 2650 5250 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2650 5000 50  0001 C CNN
+F 3 "" H 2650 5000 50  0001 C CNN
+	1    2650 5000
 	0    -1   -1   0   
 $EndComp
-Text GLabel 750  5850 0    60   Input ~ 0
-IO2
-Wire Wire Line
-	950  5600 1450 5600
-Text GLabel 750  6100 0    60   Input ~ 0
-IO0
-NoConn ~ 1450 6300
-Wire Wire Line
-	750  5850 1450 5850
-Wire Wire Line
-	750  6100 1450 6100
-Text GLabel 850  6500 0    60   Input ~ 0
-U2RXD
-Text GLabel 850  6750 0    60   Input ~ 0
-U2TXD
-Wire Wire Line
-	850  6500 1450 6500
-Wire Wire Line
-	850  6750 1450 6750
-Wire Wire Line
-	950  6950 1450 6950
-NoConn ~ 1450 7150
-NoConn ~ 7150 3950
 $Comp
-L TEST TP?
-U 1 1 5C5F0B08
-P 7650 3500
-F 0 "TP?" H 7650 3800 50  0000 C BNN
-F 1 "TEST" H 7650 3750 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 7650 3500 50  0001 C CNN
-F 3 "" H 7650 3500 50  0001 C CNN
-	1    7650 3500
-	0    1    1    0   
+L TEST TP16
+U 1 1 5C61999A
+P 2650 5300
+F 0 "TP16" H 2650 5600 50  0000 C BNN
+F 1 "TEST" H 2650 5550 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2650 5300 50  0001 C CNN
+F 3 "" H 2650 5300 50  0001 C CNN
+	1    2650 5300
+	0    -1   -1   0   
 $EndComp
 $Comp
-L 3320 MOD?
-U 1 1 5C5A5249
-P 2650 950
-F 0 "MOD?" H 2650 1200 60  0000 C CNN
-F 1 "3320" H 2650 1300 60  0000 C CNN
-F 2 "digikey-footprints:None" H 2850 1150 60  0001 L CNN
-F 3 "https://media.digikey.com/pdf/Data%20Sheets/Adafruit%20PDFs/3320_Web.pdf" H 2850 1250 60  0001 L CNN
-F 4 "1528-1801-ND" H 2850 1350 60  0001 L CNN "Digi-Key_PN"
-F 5 "3320" H 2850 1450 60  0001 L CNN "MPN"
-F 6 "RF/IF and RFID" H 2850 1550 60  0001 L CNN "Category"
-F 7 "RF Transceiver Modules" H 2850 1650 60  0001 L CNN "Family"
-F 8 "https://media.digikey.com/pdf/Data%20Sheets/Adafruit%20PDFs/3320_Web.pdf" H 2850 1750 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/adafruit-industries-llc/3320/1528-1801-ND/6560941" H 2850 1850 60  0001 L CNN "DK_Detail_Page"
-F 10 "TXRX MOD BLE WIFI ESP-WROOM-32" H 2850 1950 60  0001 L CNN "Description"
-F 11 "Adafruit Industries LLC" H 2850 2050 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 2850 2150 60  0001 L CNN "Status"
-	1    2650 950 
+L TEST TP17
+U 1 1 5C619A00
+P 2650 5600
+F 0 "TP17" H 2650 5900 50  0000 C BNN
+F 1 "TEST" H 2650 5850 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2650 5600 50  0001 C CNN
+F 3 "" H 2650 5600 50  0001 C CNN
+	1    2650 5600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L TEST TP11
+U 1 1 5C619B8C
+P 2550 3400
+F 0 "TP11" H 2550 3700 50  0000 C BNN
+F 1 "TEST" H 2550 3650 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2550 3400 50  0001 C CNN
+F 3 "" H 2550 3400 50  0001 C CNN
+	1    2550 3400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L TEST TP12
+U 1 1 5C619BBC
+P 2550 3600
+F 0 "TP12" H 2550 3900 50  0000 C BNN
+F 1 "TEST" H 2550 3850 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2550 3600 50  0001 C CNN
+F 3 "" H 2550 3600 50  0001 C CNN
+	1    2550 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L TEST TP13
+U 1 1 5C619C75
+P 2550 3800
+F 0 "TP13" H 2550 4100 50  0000 C BNN
+F 1 "TEST" H 2550 4050 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2550 3800 50  0001 C CNN
+F 3 "" H 2550 3800 50  0001 C CNN
+	1    2550 3800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L TEST TP14
+U 1 1 5C619CB9
+P 2550 4000
+F 0 "TP14" H 2550 4300 50  0000 C BNN
+F 1 "TEST" H 2550 4250 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2550 4000 50  0001 C CNN
+F 3 "" H 2550 4000 50  0001 C CNN
+	1    2550 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R_Small R32
+U 1 1 5C61CB09
+P 7200 1950
+F 0 "R32" V 7400 1900 50  0000 L CNN
+F 1 "0 OHM" V 7300 1800 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 7200 1950 50  0001 C CNN
+F 3 "" H 7200 1950 50  0001 C CNN
+	1    7200 1950
+	0    -1   1    0   
+$EndComp
+$Comp
+L R_Small R33
+U 1 1 5C61CB57
+P 7200 2450
+F 0 "R33" V 7400 2400 50  0000 L CNN
+F 1 "0 OHM" V 7300 2300 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 7200 2450 50  0001 C CNN
+F 3 "" H 7200 2450 50  0001 C CNN
+	1    7200 2450
+	0    -1   1    0   
+$EndComp
+Text GLabel 5900 3050 2    60   Input ~ 0
+LED_GREEN
+Text GLabel 5900 2650 2    60   Input ~ 0
+LED_YELLOW
+Text GLabel 5900 2550 2    60   Input ~ 0
+LED_RED
+Text Notes 5700 5350 0    60   ~ 0
+I/O: Signal names & descriptions\nADC_VIN                             Input volage\nADC_VOUT                           Output voltage\nBOOST_EN                           Enables boost controller and disables bypass\nBOOST_BYPASS                      Enables boost bypass (overridden by BOOST_EN)\nDO_0                               GPIO UART option for data output\nIO0                                Input for auto program / reset circuit\nIO2                                Input for auto program / reset circuit\nIO13                               SPI_MOSI & RTS connection options\nIO15                               CTS connection option\nSPI (SCK/MISO)\nI2C (SCL/SDA)\nUART TXDO/RXDI                  Programming port & data output option\nUART2 TXD/RXD                  Data output options
+$Comp
+L BAT54S-7-F D6
+U 1 1 5C62CAC0
+P 10000 1300
+F 0 "D6" H 10000 1500 60  0000 C BNN
+F 1 "BAT54S-7-F" H 10000 1100 60  0000 C CNN
+F 2 "digikey-footprints:SOT-23-3" H 10200 1500 60  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 10200 1600 60  0001 L CNN
+F 4 "BAT54S-FDICT-ND" H 10200 1700 60  0001 L CNN "Digi-Key_PN"
+F 5 "BAT54S-7-F" H 10200 1800 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 10200 1900 60  0001 L CNN "Category"
+F 7 "Diodes - Rectifiers - Arrays" H 10200 2000 60  0001 L CNN "Family"
+F 8 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 10200 2100 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/diodes-incorporated/BAT54S-7-F/BAT54S-FDICT-ND/755493" H 10200 2200 60  0001 L CNN "DK_Detail_Page"
+F 10 "DIODE ARRAY SCHOTTKY 30V SOT23-3" H 10200 2300 60  0001 L CNN "Description"
+F 11 "Diodes Incorporated" H 10200 2400 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 10200 2500 60  0001 L CNN "Status"
+	1    10000 1300
+	-1   0    0    1   
+$EndComp
+$Comp
+L BAT54S-7-F D7
+U 1 1 5C62CBD7
+P 10000 2300
+F 0 "D7" H 10000 2500 60  0000 C BNN
+F 1 "BAT54S-7-F" H 10000 2100 60  0000 C CNN
+F 2 "digikey-footprints:SOT-23-3" H 10200 2500 60  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 10200 2600 60  0001 L CNN
+F 4 "BAT54S-FDICT-ND" H 10200 2700 60  0001 L CNN "Digi-Key_PN"
+F 5 "BAT54S-7-F" H 10200 2800 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 10200 2900 60  0001 L CNN "Category"
+F 7 "Diodes - Rectifiers - Arrays" H 10200 3000 60  0001 L CNN "Family"
+F 8 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 10200 3100 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/diodes-incorporated/BAT54S-7-F/BAT54S-FDICT-ND/755493" H 10200 3200 60  0001 L CNN "DK_Detail_Page"
+F 10 "DIODE ARRAY SCHOTTKY 30V SOT23-3" H 10200 3300 60  0001 L CNN "Description"
+F 11 "Diodes Incorporated" H 10200 3400 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 10200 3500 60  0001 L CNN "Status"
+	1    10000 2300
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR047
+U 1 1 5C62D05D
+P 10500 2700
+F 0 "#PWR047" H 10500 2450 50  0001 C CNN
+F 1 "GND" H 10500 2550 50  0000 C CNN
+F 2 "" H 10500 2700 50  0001 C CNN
+F 3 "" H 10500 2700 50  0001 C CNN
+	1    10500 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR048
+U 1 1 5C62D39F
+P 10700 1000
+F 0 "#PWR048" H 10700 850 50  0001 C CNN
+F 1 "+3.3V" H 10700 1140 50  0000 C CNN
+F 2 "" H 10700 1000 50  0001 C CNN
+F 3 "" H 10700 1000 50  0001 C CNN
+	1    10700 1000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7150 3500 7650 3500
-Text GLabel 7650 3200 2    60   Input ~ 0
-I2C_SDA
-Text GLabel 7650 2200 2    60   Input ~ 0
-I2C_SCL
+	900  1450 900  1300
 Wire Wire Line
-	7650 2200 7150 2200
+	1400 1450 1400 1300
 Wire Wire Line
-	7650 3200 7150 3200
-$Comp
-L TEST TP?
-U 1 1 5C5F0D76
-P 7650 1950
-F 0 "TP?" H 7650 2250 50  0000 C BNN
-F 1 "TEST" H 7650 2200 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 7650 1950 50  0001 C CNN
-F 3 "" H 7650 1950 50  0001 C CNN
-	1    7650 1950
-	0    1    1    0   
-$EndComp
+	1400 1650 1400 1800
 Wire Wire Line
-	7150 1950 7650 1950
-Text GLabel 950  5600 0    60   Input ~ 0
-IO15
+	900  1650 900  1800
+Wire Wire Line
+	2600 2050 3000 2050
+Wire Wire Line
+	3000 1950 2800 1950
+Wire Wire Line
+	2800 1950 2800 1400
+Wire Wire Line
+	3000 1850 2150 1850
+Wire Wire Line
+	2150 1850 2150 1950
+Wire Wire Line
+	2600 2350 3000 2350
+Wire Wire Line
+	2650 2450 3000 2450
+Wire Wire Line
+	2650 2550 3000 2550
+Wire Wire Line
+	2700 2650 3000 2650
+Wire Wire Line
+	2650 2750 3000 2750
+Wire Wire Line
+	2600 3050 3000 3050
+Wire Wire Line
+	2600 3150 3000 3150
+Wire Wire Line
+	2600 4300 4000 4300
+Wire Wire Line
+	2600 4500 4700 4500
+Wire Wire Line
+	2600 4700 4800 4700
+Wire Wire Line
+	4000 4300 4000 3950
+Wire Wire Line
+	4700 4500 4700 3950
+Wire Wire Line
+	4800 4700 4800 3950
+Wire Wire Line
+	3900 3950 3900 4900
+Wire Wire Line
+	5400 3150 5900 3150
+Wire Wire Line
+	5400 2950 5900 2950
+Wire Wire Line
+	5400 2850 5900 2850
+Wire Wire Line
+	5400 2750 6450 2750
+Wire Wire Line
+	5400 2450 6450 2450
+Wire Wire Line
+	5400 2350 5900 2350
+Wire Wire Line
+	5400 2050 5900 2050
+Wire Wire Line
+	5400 1950 6350 1950
+Wire Wire Line
+	5400 1850 5550 1850
+Wire Wire Line
+	5550 1850 5550 3400
+Wire Wire Line
+	5450 1150 5450 850 
+Wire Wire Line
+	5450 850  4800 850 
+Wire Wire Line
+	4800 850  4800 1050
+Wire Wire Line
+	2650 2850 3000 2850
+Wire Wire Line
+	2500 2950 3000 2950
+Wire Wire Line
+	2550 3400 2800 3400
+Wire Wire Line
+	2800 3400 2800 2350
+Connection ~ 2800 2350
+Wire Wire Line
+	2850 2450 2850 3600
+Wire Wire Line
+	2850 3600 2550 3600
+Connection ~ 2850 2450
+Wire Wire Line
+	2900 2750 2900 3800
+Wire Wire Line
+	2900 3800 2550 3800
+Connection ~ 2900 2750
+Wire Wire Line
+	2950 2850 2950 4000
+Wire Wire Line
+	2950 4000 2550 4000
+Connection ~ 2950 2850
+Wire Wire Line
+	2650 5000 2850 5000
+Wire Wire Line
+	2850 5000 2850 4300
+Connection ~ 2850 4300
+Wire Wire Line
+	3000 4500 3000 5300
+Wire Wire Line
+	3000 5300 2650 5300
+Connection ~ 3000 4500
+Wire Wire Line
+	3150 4700 3150 5600
+Wire Wire Line
+	3150 5600 2650 5600
+Connection ~ 3150 4700
+Wire Wire Line
+	5950 3450 5750 3450
+Wire Wire Line
+	5750 3450 5750 3150
+Connection ~ 5750 3150
+Wire Wire Line
+	7550 2450 7300 2450
+Wire Wire Line
+	7550 1950 7300 1950
+Wire Wire Line
+	7100 1950 6900 1950
+Wire Wire Line
+	6900 1950 6900 2150
+Wire Wire Line
+	6900 2150 5400 2150
+Wire Wire Line
+	7100 2450 6900 2450
+Wire Wire Line
+	6900 2450 6900 2250
+Wire Wire Line
+	6900 2250 5400 2250
+Wire Wire Line
+	5900 3050 5400 3050
+Wire Wire Line
+	5900 2550 5400 2550
+Wire Wire Line
+	5400 2650 5900 2650
+Wire Wire Line
+	10200 1400 10500 1400
+Wire Wire Line
+	10500 1400 10500 2700
+Wire Wire Line
+	10200 2400 10500 2400
+Connection ~ 10500 2400
+Wire Wire Line
+	10700 1000 10700 2200
+Wire Wire Line
+	10700 2200 10200 2200
+Wire Wire Line
+	10200 1200 10700 1200
+Connection ~ 10700 1200
+Text GLabel 9400 1300 0    60   Input ~ 0
+ADC_VIN
+Text GLabel 9400 2300 0    60   Input ~ 0
+ADC_VOUT
+Wire Wire Line
+	9400 1300 9700 1300
+Wire Wire Line
+	9400 2300 9700 2300
+Text Notes 9250 850  0    60   ~ 0
+Overvoltage clamping
 $EndSCHEMATC

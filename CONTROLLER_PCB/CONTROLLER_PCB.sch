@@ -176,6 +176,7 @@ LIBS:dk_TVS-Diodes
 LIBS:dk_TVS-Mixed-Technology
 LIBS:dk_USB-DVI-HDMI-Connectors
 LIBS:TPS55340PWP
+LIBS:espressif-xess
 LIBS:CONTROLLER_PCB-cache
 EELAYER 25 0
 EELAYER END

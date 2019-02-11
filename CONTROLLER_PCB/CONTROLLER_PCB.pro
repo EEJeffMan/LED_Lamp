@@ -1,4 +1,4 @@
-update=2/10/2019 12:58:14 AM
+update=2/10/2019 10:46:11 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -204,5 +204,16 @@ LibName174=C:/KiCad/digikey-kicad-library-master/digikey-symbols/dk_TVS-Diodes
 LibName175=C:/KiCad/digikey-kicad-library-master/digikey-symbols/dk_TVS-Mixed-Technology
 LibName176=C:/KiCad/digikey-kicad-library-master/digikey-symbols/dk_USB-DVI-HDMI-Connectors
 LibName177=C:/KiCad/Libraries/TPS55340PWP
+LibName178=C:/KiCad/Libraries/ESP32-kiCAD-Footprints-master/ESP32-Footprints/espressif-xess
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=C:/Users/Laptop/Documents/GitHub/LED_Lamp/CONTROLLER_PCB/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [general]
 version=1
