@@ -1,21 +1,14 @@
-Source:,C:/Users/Laptop/Documents/GitHub/LED_Lamp/LED_PCB/LED_PCB.sch,,,,,,,
-Date:,2/7/2019 22:09,,,,,,,
-Tool:,Eeschema 4.0.7,,,,,,,
-Generator:,C:/KiCad/bin/scripting/plugins/bom_csv_grouped_by_value_with_fp.py,,,,,,,
-Component Count:,72,,,,,,,
-Ref,Qnty,Value,Cmp name,Footprint,Description,Vendor,-,Comments
-"C1, C3, C5, C6, ",4,4.7uF,C_Small,Capacitors_SMD:C_0805_HandSoldering,Unpolarized capacitor,CL21A475KLCLQNC,-,
-"C4, C2, C7, C8, C11, C12, C9, C13, C10, C14, C15, C16, C17, C18, ",14,0.1uF,C_Small,Capacitors_SMD:C_0603_HandSoldering,Unpolarized capacitor,CGA3E3X7S2A104K080AB,-,
-"C19, ",1,1000pF,C_Small,Capacitors_SMD:C_0603_HandSoldering,Unpolarized capacitor,CL10B102KB8NNNC,-,
-"D1, D2, D3, D4, D5, D6, D7, D8, ",8,XMLBWT-x,LED_THERMAL_PAD,CustomFootprints:CREE-XM-L_HAND_SOLDERED,,XMLBWT-00-0000-000LT20E7,-,
-"D9, ",1,BAT54S-7-F,BAT54S-7-F,digikey-footprints:SOT-23-3,DIODE ARRAY SCHOTTKY 30V SOT23-3,BAT54S-7-F,-,
-"J9, ",1,Conn_01x06,Conn_01x06,Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm_SMD_Pin1Left,"Generic connector, single row, 01x06",,-,
-"LED1, LED2, LED3, LED4, LED5, LED6, LED7, LED8, LED9, LED10, LED11, LED12, ",12,WS2812B,WS2812B,LEDs:LED_WS2812B-PLCC4,RGB LED with integrated controller,WS2812B,-,
-"Q1, ",1,Q_NMOS_GSD,Q_NMOS_GSD,TO_SOT_Packages_SMD:SOT-23,Transistor N-MOSFETwith substrate diode (general),2N7002,-,
-"Q2, ",1,Q_PMOS_GDS,Q_PMOS_GDS,TO_SOT_Packages_SMD:TO-252-2_Rectifier,Transistor P-MOSFET with substrate diode (general),TSM480P06CP ROG,-,
-"Q3, ",1,Q_NMOS_SDG,Q_NMOS_SDG,TO_SOT_Packages_SMD:SOT-89-3_Handsoldering,Transistor N-MOSFETwith substrate diode (general),CXDM4060N TR,-,
-"R4, R3, R11, R14, ",4,10k,R_Small,Resistors_SMD:R_0603_HandSoldering,"Resistor, small symbol",RC0603FR-0710KL,-,
-"R5, R10, R12, R13, ",3,0 OHM,R_Small,Resistors_SMD:R_0603_HandSoldering,"Resistor, small symbol","Use solder jumpers, don't buy",-,R12 DNP
-"R6, R1, R2, R7, R8, R9, ",6,1k,R_Small,Resistors_SMD:R_0603_HandSoldering,"Resistor, small symbol",RC0603FR-071KL,-,
-"U1, ",1,MIC5233-3.3YS-TR,MIC5233-3.3YS-TR,TO_SOT_Packages_SMD:SOT-223,IC REG LINEAR 3.3V 800MA SOT223,MIC5233-3.3YS-TR,-,
-"U2, ",1,ATTINY85-20SU,ATTINY85-20SU,Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm,"SO8 Wide, 2k Flash, 128B SRAM, 128B EEPROM, Debug Wire",ATTINY85-20SUR,-,
+Ref,Qnty,Value,Vendor
+"C1, C3, C5, C6, ",4,4.7uF,CL21A475KLCLQNC
+"C4, C2, C7, C8, C11, C12, C9, C13, C10, C14, C15, C16, C17, C18, ",14,0.1uF,CGA3E3X7S2A104K080AB
+"C19, ",1,1000pF,CL10B102KB8NNNC
+"D1, D2, D3, D4, D5, D6, D7, D8, ",8,XMLBWT-x,XMLBWT-00-0000-000LT20E7
+"D9, ",1,BAT54S-7-F,BAT54S-7-F
+"LED1, LED2, LED3, LED4, LED5, LED6, LED7, LED8, LED9, LED10, LED11, LED12, ",12,WS2812B,WS2812B
+"Q1, ",1,Q_NMOS_GSD,2N7002
+"Q2, ",1,Q_PMOS_GDS,TSM480P06CP ROG
+"Q3, ",1,Q_NMOS_SDG,CXDM4060N TR
+"R4, R3, R11, R14, ",4,10k,RC0603FR-0710KL
+"R6, R1, R2, R7, R8, R9, ",6,1k,RC0603FR-071KL
+"U1, ",1,MIC5233-3.3YS-TR,MIC5233-3.3YS-TR
+"U2, ",1,ATTINY85-20SU,ATTINY85-20SUR
