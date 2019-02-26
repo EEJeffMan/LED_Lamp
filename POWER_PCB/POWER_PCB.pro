@@ -1,4 +1,4 @@
-update=2/23/2019 8:21:53 AM
+update=2/25/2019 11:19:59 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -204,5 +204,15 @@ LibName174=C:/KiCad/digikey-kicad-library-master/digikey-symbols/dk_Trimmer-Pote
 LibName175=C:/KiCad/digikey-kicad-library-master/digikey-symbols/dk_TVS-Diodes
 LibName176=C:/KiCad/digikey-kicad-library-master/digikey-symbols/dk_TVS-Mixed-Technology
 LibName177=C:/KiCad/digikey-kicad-library-master/digikey-symbols/dk_USB-DVI-HDMI-Connectors
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=./
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [general]
 version=1
