@@ -18,7 +18,7 @@ Ref,Qnty,Value,Cmp name,Footprint,Description,Vendor,-,Comments
 "Q1, Q4, ",2,Q_PMOS_GDS,Q_PMOS_GDS,TO_SOT_Packages_SMD:TO-252-2_Rectifier,Transistor P-MOSFET with substrate diode (general),,-,On hand
 "Q3, Q2, ",2,Q_NMOS_GSD,Q_NMOS_GSD,TO_SOT_Packages_SMD:SOT-23,Transistor N-MOSFETwith substrate diode (general),,-,On hand
 "R1, ",1,1M,R_Small,Resistors_SMD:R_0603_HandSoldering,"Resistor, small symbol",,-,On hand
-"R2, ",1,20k,R_Small,Resistors_SMD:R_0603_HandSoldering,"Resistor, small symbol",,-,
+"R2, ",1,20k,R_Small,Resistors_SMD:R_0603_HandSoldering,"Resistor, small symbol",,-,Use 10k instead
 "R4, R10, R12, ",3,1k,R_Small,Resistors_SMD:R_0603_HandSoldering,"Resistor, small symbol",,-,On hand
 "R5, R3, R13, R11, ",4,10k,R_Small,Resistors_SMD:R_0603_HandSoldering,"Resistor, small symbol",,-,On hand
 "R7, R6, ",2,0 OHM,R_Small,Resistors_SMD:R_0603_HandSoldering,"Resistor, small symbol",,-,On hand

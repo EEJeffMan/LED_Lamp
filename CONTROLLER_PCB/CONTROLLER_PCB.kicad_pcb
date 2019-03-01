@@ -3,7 +3,7 @@
   (general
     (links 133)
     (no_connects 0)
-    (area 49.2826 53.3536 120.2224 100.7414)
+    (area 47.46 53.3536 122.390001 102.540001)
     (thickness 1.6)
     (drawings 22)
     (tracks 496)
@@ -39,7 +39,7 @@
   )
 
   (setup
-    (last_trace_width 0.254)
+    (last_trace_width 0.3048)
     (user_trace_width 0.1524)
     (user_trace_width 0.254)
     (user_trace_width 0.635)
@@ -72,7 +72,7 @@
     (grid_origin 50 100)
     (visible_elements 7FFEFFFF)
     (pcbplotparams
-      (layerselection 0x00030_80000001)
+      (layerselection 0x010f0_80000007)
       (usegerberextensions false)
       (excludeedgelayer true)
       (linewidth 0.100000)
@@ -93,9 +93,9 @@
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory ./))
   )
 
   (net 0 "")
