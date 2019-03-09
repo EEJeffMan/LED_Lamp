@@ -30,7 +30,7 @@
  *      RGB's must turn off when greater than ~5.5V to prevent damage.
  *    
  *    Use softwareserial to read input commands via DIN.
- *    
+ *      
  *    RGB's use "FastLED" library, credit to tutorial in link below:
  *    https://howtomechatronics.com/tutorials/arduino/how-to-control-ws2812b-individually-addressable-leds-using-arduino/
  *    
@@ -39,6 +39,8 @@
  *      LED_MODE_OFF      both off
  *      LED_MODE_WHITE    RGB off, white on
  *      LED_MODE_RGB      RGB on, set PWM via FastLED
+ *      LED_MODE_RGB_SET  Set RGB colors with a set of bytes.
+ *      
  */
 
 #include <FastLED.h>
@@ -107,13 +109,8 @@
 // led mode defines
 #define LED_MODE_OFF          0x10
 #define LED_MODE_WHITE        0x20
-#define LED_MODE_RGB_WHITE    0x30
-#define LED_MODE_RGB_PURPLE   0x31
-#define LED_MODE_RGB_BLUE     0x32
-#define LED_MODE_RGB_RED      0x33
-#define LED_MODE_RGB_ORANGE   0x34
-#define LED_MODE_RGB_GREEN    0x35
-#define LED_MODE_RGB_Yellow   0x36
+#define LED_MODE_RGB          0x30
+#define LED_MODE_RGB_SET      0x40
 
 // pin definitions
 #define WHITE_EN_PIN    3
@@ -128,12 +125,26 @@
 #define rgb_leds_on()       digitalWrite(RGB_EN_PIN, HIGH);
 #define rgb_leds_off()      digitalWrite(RGB_EN_PIN, LOW);
 
+// indexes for RGB data array
+#define RGB_DATA_RED    0
+#define RGB_DATA_GREEN  1
+#define RGB_DATA_BLUE   2
+
+// max values for white and RGB LEDs
+#define ADC_WHITE_MAX   1000
+#define ADC_RGB_MAX     500
+
 // function prototypes
+unsigned int read_vin();
 void set_led_mode (unsigned int mode);
+unsigned int read_command(unsigned int command);
 
 // global variables
 unsigned int led_mode = LED_MODE_OFF;
+unsigned int rgb_data[3];
+unsigned int rgb_data_index = 0;
 
+SoftwareSerial tinySerial(DOUT_PIN, DIN_PIN);   // DOUT is not actually UART, it is  taken over with the FastLED library below.
 CRGB leds[NUM_LEDS];
 
 void setup() {
@@ -146,9 +157,8 @@ void setup() {
 
   //initially, both outputs off
   led_mode = LED_MODE_OFF;
-  set_led_mode(led_mode);
+  set_led_mode(LED_MODE_OFF); //led_mode);
 
-  SoftwareSerial tinySerial(DOUT_PIN, DIN_PIN);   // DOUT is not actually UART, it is  taken over with the FastLED library below.
   tinySerial.begin(9600);
   //Serial.begin(9600);
   
@@ -165,30 +175,49 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
-   unsigned int vin;
+//   unsigned int data;
 
     // first, read vin and set output mode (off, white LEDs, or RGB LEDs):
+    
+    //set_led_mode(led_mode);
 
-   vin = analogRead(VIN_ADC_PIN);
+    led_mode = read_vin();
+    
+    //set_led_mode(read_vin());
 
-   if (vin > ADC_WHITE_MAX)
-   {
-      led_mode = LED_MODE_OFF;
-   }
-   else if (vin > ADC_RGB_MAX)    // less than white ma but greater than RGB max
-   {
-      led_mode = LED_MODE_WHITE;
-   }
-   else                           // low enough to safely run RGB LEDs.
-   {
-      led_mode = LED_MODE_RGB;
-   }
+    // second, look for control command from data input
 
-   set_led_mode(led_mode);
+    if(tinySerial.available())
+    { 
+//        data = tinySerial.read();
 
-    // second, set RGB color, if in RGB mode
+        set_led_mode( read_command( tinySerial.read() ) );
+    }
 
     delay(10);    // 10 ms
+}
+
+unsigned int read_vin()
+{
+    unsigned int vin;
+    unsigned int mode;
+  
+    vin = analogRead(VIN_ADC_PIN);
+
+    if (vin > ADC_WHITE_MAX)
+    {
+        mode = LED_MODE_OFF;
+    }
+    else if (vin > ADC_RGB_MAX)    // less than white ma but greater than RGB max
+    {
+        mode = LED_MODE_WHITE;
+    }
+    else                           // low enough to safely run RGB LEDs.
+    {
+        mode = LED_MODE_RGB;
+    }
+
+    return mode;
 }
 
 void set_led_mode(unsigned int mode)
@@ -217,3 +246,81 @@ void set_led_mode(unsigned int mode)
         break;
     }
 }
+
+unsigned int read_command(unsigned int data)
+{
+    /*
+     *  input: serial command / data byte.
+     *  
+     *  LED_MODE_OFF      both off
+     *  LED_MODE_WHITE    RGB off, white on
+     *  LED_MODE_RGB      RGB on, set PWM via FastLED
+     *  LED_MODE_RGB_SET  Set RGB colors with a set of bytes 
+     *  
+     *  the first 3 commands will directly determine how the output control pins should be set.
+     *  
+     *  the last command will trigger a sequence of serial bytes that contain RGB color data. Each byte will be sent every 50ms.
+     *  
+     *  first byte: blue data
+     *  second byte: green data
+     *  third byte: red data
+     */
+        static unsigned int mode;
+
+        // NOTE: when this if is taken, mode is not changed, but it is still returned. the previous mode is retained.
+        if (rgb_data_index)   // if index > 0, we are in the middle of transferring data.
+        {
+            rgb_data_index--;
+          
+            rgb_data[rgb_data_index] = data;
+
+            // after the last byte is sent, update the DOUT output data being sent.
+            if (0 == rgb_data_index)
+            {
+                for (int i=0; i<NUM_LEDS; i++)
+                {
+                  leds[i] = CRGB(GREEN_R, GREEN_G, GREEN_B);//(rgb_data{RGB_DATA_RED], rgb_data{RGB_DATA_GREEN], rgb_data{RGB_DATA_BLUE]);
+                }
+                FastLED.show();
+            }
+        }
+        else
+        {
+            switch(data)
+            {
+                case LED_MODE_RGB_SET:
+
+                    rgb_data_index = 3;
+
+                break;
+
+                case LED_MODE_OFF:
+
+                    mode = LED_MODE_OFF;
+
+                break;
+
+                case LED_MODE_WHITE:
+
+                    mode = LED_MODE_WHITE;
+
+                break;
+
+                case LED_MODE_RGB:
+
+                    mode = LED_MODE_RGB;
+
+                break;
+
+                default: 
+
+                    mode = LED_MODE_OFF;
+
+                break;
+            }
+        }
+
+        return mode;
+}
+
+// end of file.
