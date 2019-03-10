@@ -160,7 +160,6 @@ void setup() {
   set_led_mode(LED_MODE_OFF); //led_mode);
 
   tinySerial.begin(9600);
-  //Serial.begin(9600);
   
   // put your setup code here, to run once:
   FastLED.addLeds<WS2812, LED_PIN, COLOR_ORDER>(leds, NUM_LEDS);
@@ -175,25 +174,15 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
-//   unsigned int data;
-
-    // first, read vin and set output mode (off, white LEDs, or RGB LEDs):
-    
-    //set_led_mode(led_mode);
-
+    // first, read vin and determine output mode (off, white LEDs, or RGB LEDs):    
     led_mode = read_vin();
     
-    //set_led_mode(read_vin());
-
     // second, look for control command from data input
-
     if(tinySerial.available())
     { 
-//        data = tinySerial.read();
-
-        set_led_mode( read_command( tinySerial.read() ) );
+        led_mode = read_command( tinySerial.read() ) );
     }
-
+    set_led_mode(led_mode);
     delay(10);    // 10 ms
 }
 
@@ -267,7 +256,7 @@ unsigned int read_command(unsigned int data)
      */
         static unsigned int mode;
 
-        // NOTE: when this if is taken, mode is not changed, but it is still returned. the previous mode is retained.
+        // NOTE: when this "if" is taken, mode is not changed, but it is still returned. the previous mode is retained.
         if (rgb_data_index)   // if index > 0, we are in the middle of transferring data.
         {
             rgb_data_index--;
@@ -279,7 +268,7 @@ unsigned int read_command(unsigned int data)
             {
                 for (int i=0; i<NUM_LEDS; i++)
                 {
-                  leds[i] = CRGB(GREEN_R, GREEN_G, GREEN_B);//(rgb_data{RGB_DATA_RED], rgb_data{RGB_DATA_GREEN], rgb_data{RGB_DATA_BLUE]);
+                  leds[i] = CRGB(/*GREEN_R, GREEN_G, GREEN_B);(*/rgb_data{RGB_DATA_RED], rgb_data{RGB_DATA_GREEN], rgb_data{RGB_DATA_BLUE]);
                 }
                 FastLED.show();
             }
@@ -290,7 +279,7 @@ unsigned int read_command(unsigned int data)
             {
                 case LED_MODE_RGB_SET:
 
-                    rgb_data_index = 3;
+                    rgb_data_index = 3;     // this will start the data read sequence, which occurs in the "if" statement above.
 
                 break;
 
