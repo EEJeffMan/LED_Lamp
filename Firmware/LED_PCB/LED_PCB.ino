@@ -4,6 +4,12 @@
  * Date: 3/9/19
  * 
  * Replace bulb in desk lamp with LEDs.
+ * 
+ * MCU is ATTINY85, using the guide below to install support for this chip in Arduino:
+ *  http://highlowtech.org/?p=1695
+ *  
+ * This was found courtesy of the following post:
+ *  https://oscarliang.com/program-attiny-micro-controller-using-arduino/
  *    
  * Hardware options for white or RGB LEDs
  *   White LEDs: 8 high power Cree LEDs, needs an external constant current regulator. Load is ~24V, target current is ~400mA max.
@@ -33,6 +39,7 @@
  *      
  *    RGB's use "FastLED" library, credit to tutorial in link below:
  *    https://howtomechatronics.com/tutorials/arduino/how-to-control-ws2812b-individually-addressable-leds-using-arduino/
+ *    FastLED github: https://github.com/FastLED/FastLED
  *    
  *    Commands:
  *    
@@ -106,6 +113,10 @@
  #define MAROON_G 0
  #define MAROON_B 0  
 
+ #define PURPLE_R 127
+ #define PURPLE_G 0
+ #define PURPLE_B 255
+
 // led mode defines
 #define LED_MODE_OFF          0x10
 #define LED_MODE_WHITE        0x20
@@ -166,22 +177,27 @@ void setup() {
 
   for (int i=0; i<NUM_LEDS; i++)
   {
-    leds[i] = CRGB(WHITE_R, WHITE_G, WHITE_B);
+    leds[i] = CRGB(PURPLE_R, PURPLE_G, PURPLE_B);//WHITE_R, WHITE_G, WHITE_B);
   }
-  FastLED.show();
+  //FastLED.show();
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
 
     // first, read vin and determine output mode (off, white LEDs, or RGB LEDs):    
-    led_mode = read_vin();
+    //led_mode = read_vin();
+    // debugging: force RGB LED mode.
+    led_mode = LED_MODE_RGB;
     
     // second, look for control command from data input
-    if(tinySerial.available())
+    /*if(tinySerial.available())
     { 
-        led_mode = read_command( tinySerial.read() ) );
-    }
+        led_mode = read_command( tinySerial.read() );
+    }*/
+
+    // debugging: force RGB colors to remain in the state set in setup()
+    
     set_led_mode(led_mode);
     delay(10);    // 10 ms
 }
@@ -226,6 +242,7 @@ void set_led_mode(unsigned int mode)
         case LED_MODE_RGB:
            white_leds_on();   //voltage will be too low for LEDs to draw current, so ok to leave this on.
            rgb_leds_on();
+           FastLED.show();
         break;
 
         default:
@@ -268,7 +285,7 @@ unsigned int read_command(unsigned int data)
             {
                 for (int i=0; i<NUM_LEDS; i++)
                 {
-                  leds[i] = CRGB(/*GREEN_R, GREEN_G, GREEN_B);(*/rgb_data{RGB_DATA_RED], rgb_data{RGB_DATA_GREEN], rgb_data{RGB_DATA_BLUE]);
+                  leds[i] = CRGB(GREEN_R, GREEN_G, GREEN_B);//(rgb_data{RGB_DATA_RED], rgb_data{RGB_DATA_GREEN], rgb_data{RGB_DATA_BLUE]);
                 }
                 FastLED.show();
             }
@@ -278,33 +295,19 @@ unsigned int read_command(unsigned int data)
             switch(data)
             {
                 case LED_MODE_RGB_SET:
-
                     rgb_data_index = 3;     // this will start the data read sequence, which occurs in the "if" statement above.
-
                 break;
-
                 case LED_MODE_OFF:
-
                     mode = LED_MODE_OFF;
-
                 break;
-
                 case LED_MODE_WHITE:
-
                     mode = LED_MODE_WHITE;
-
                 break;
-
                 case LED_MODE_RGB:
-
                     mode = LED_MODE_RGB;
-
                 break;
-
                 default: 
-
                     mode = LED_MODE_OFF;
-
                 break;
             }
         }
